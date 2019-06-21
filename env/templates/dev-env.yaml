@@ -1,11 +1,23 @@
 apiVersion: jenkins.io/v1
 kind: Environment
 metadata:
-  creationTimestamp: null
+  annotations:
+    jenkins.io/chart: env
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"jenkins.io/v1","kind":"Environment","metadata":{"annotations":{"jenkins.io/chart":"env"},"creationTimestamp":null,"labels":{"env":"dev","jenkins.io/chart-release":"jenkins-x","jenkins.io/namespace":"jx","jenkins.io/version":"0.0.1","team":"jx"},"name":"dev","namespace":"jx"},"spec":{"kind":"Development","label":"Development","namespace":"jx","previewGitInfo":{"user":{}},"promotionStrategy":"Never","source":{"ref":"master","url":"https://github.com/dconde-jx-test/environment-davec-test-gitops27-dev.git"},"teamSettings":{"appsRepository":"https://storage.googleapis.com/chartmuseum.jenkins-x.io","buildPackName":"kubernetes-workloads","buildPackRef":"master","buildPackUrl":"https://github.com/jenkins-x-buildpacks/jenkins-x-kubernetes.git","defaultScheduler":{"kind":"","name":""},"dockerRegistryOrg":"apps-dev-229310","envOrganisation":"dconde-jx-test","gitServer":"https://github.com","helmTemplate":true,"importMode":"YAML","kubeProvider":"gke","pipelineUsername":"daveconde-jx-bot","promotionEngine":"Prow","prowEngine":"Tekton","quickstartLocations":[{"excludes":["WIP-*"],"gitKind":"github","gitUrl":"https://github.com","includes":["*"],"owner":"jenkins-x-quickstarts"}],"storageLocations":[{"bucketUrl":"gs://davec-test-gitops27-lts-3398e6a7-b8cd-495f-bbce-b2d51569e131","classifier":"default"},{"bucketUrl":"gs://davec-test-gitops27-lts-3398e6a7-b8cd-495f-bbce-b2d51569e131","classifier":"logs"}],"useGitOps":true,"versionStreamUrl":"https://github.com/jenkins-x/jenkins-x-versions.git"},"webHookEngine":"Prow"},"status":{}}
+  creationTimestamp: "2019-06-21T14:00:01Z"
+  generation: 1
   labels:
     env: dev
+    jenkins.io/chart-release: jenkins-x
+    jenkins.io/namespace: jx
+    jenkins.io/version: 0.0.1
     team: jx
   name: dev
+  namespace: jx
+  resourceVersion: "3930"
+  selfLink: /apis/jenkins.io/v1/namespaces/jx/environments/dev
+  uid: dc9df0a6-942c-11e9-958c-42010a840206
 spec:
   kind: Development
   label: Development
@@ -22,8 +34,8 @@ spec:
     buildPackRef: master
     buildPackUrl: https://github.com/jenkins-x-buildpacks/jenkins-x-kubernetes.git
     defaultScheduler:
-      kind: ""
-      name: ""
+      kind: Scheduler
+      name: default-scheduler
     dockerRegistryOrg: apps-dev-229310
     envOrganisation: dconde-jx-test
     gitServer: https://github.com
