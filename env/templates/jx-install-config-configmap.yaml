@@ -1,0 +1,35 @@
+apiVersion: v1
+data:
+  ca.crt: |
+    -----BEGIN CERTIFICATE-----
+    MIIDCzCCAfOgAwIBAgIQJwbsCrjdBnLia3sz8SVhzjANBgkqhkiG9w0BAQsFADAv
+    MS0wKwYDVQQDEyQyOWY5MWFiMS0xZmE3LTRlMGEtYjA1My0zM2IxNjc3YTI0ZGIw
+    HhcNMTkwNjIxMTI0NzAxWhcNMjQwNjE5MTM0NzAxWjAvMS0wKwYDVQQDEyQyOWY5
+    MWFiMS0xZmE3LTRlMGEtYjA1My0zM2IxNjc3YTI0ZGIwggEiMA0GCSqGSIb3DQEB
+    AQUAA4IBDwAwggEKAoIBAQDVnS5jzpBPBctscyhlXOWW2D0R6r6/GkiZ5Nyuv4wU
+    IlUsslKZ4Hw5nIFT0/FHabRMwW2taU9idjz/gIaim1u4VQxt3IY1XGWgzKCyRRf4
+    X+IeVZXC0id0AXvM726qX3+EgHD15XdwhDwuA8N4XEvw/TnTr2mdxggKQrmFSk+X
+    Bmu+dlzvDRIQdbJvqgqcgy/OJG21NOvZf8YnSjU0rDIotia0zKxriMNXF/s6UTw3
+    4OvlfQo5ap/ruU2i7d5ctvJyubDAAw7D0wPKQsxVo/nQbMrWeOecQYD2jmCs3jwl
+    diyLOVbnituyfYUrnGf97KQAyRo9Jrgg65aod0OwobQVAgMBAAGjIzAhMA4GA1Ud
+    DwEB/wQEAwICBDAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQAM
+    h5vaxn0rJum/N678Ph8bT0Fcro/z/mu7Fs0bqBpaI9YjRh/Z2WytXXd574+o8pWL
+    cJOewcS2BQipl9YLymZKaJvZHSkOVk/mESyqLdf/d+FKZ/6XfHKvzxem/3o+O8sQ
+    2GRSBclP/aUA2FvQL3eF+EBLQtPS9j58mwZLpOEllvX1ZUWnJeI55sLvVj0+qsd4
+    OR7h3YYJfxpFi745cvpuAbZN0sLmYIlSp4qYfrZvXkxHm2QsK1YxRNxfz6I7zzMg
+    0BzELUNs4IoZ2ikhbe4Z1oK/KnuWo22X/XHWozDAQQI3+VN1Qm0jRcphSV+AW7r8
+    iTLcrKeZhseghDZlIRWy
+    -----END CERTIFICATE-----
+  clusterName: davec-test-gitops27
+  jx-install-version: 2.0.0-dev+ac719aa2a
+  kubeProvider: gke
+  projectID: apps-dev-229310
+  region: ""
+  secretsLocation: vault
+  server: https://35.205.160.160
+  systemVaultName: jx-vault-davec-test-gi
+  zone: europe-west1-c
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: jx-install-config
